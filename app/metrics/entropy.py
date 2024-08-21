@@ -3,8 +3,8 @@ import scipy.stats
 from app.metric import Metric
 
 class Entropy(Metric):
-  def value(self, data: str) -> float:
-    bases = collections.Counter([char for char in data])
+  def measure(self) -> float:
+    bases = collections.Counter([char for char in self.data])
     bases_values = bases.values()
     bases_sum = sum(bases_values)
     distribution = [x / bases_sum for x in bases_values]

@@ -18,6 +18,11 @@ pip install -r ./requirements.txt
 python main.py
 ```
 
+## End Development Session
+```
+deactivate
+```
+
 ## General plan / brain dump
 Essentially it'll use a kind of optimising/evolutionary algorithm, to enumerate possible combinations of operations, and for each step there'll be a success score generated according to a set of heuristics to check for meaningful structure in the decryption to estimate if it has worked, needed as there are many key/iv collisions that produce noise output without explicit failure; for example, if output contains regular structure, such as a set of regularly delimited substrings of characters (like octal output, as one video had before), or whether the result contains grammatical structure.
 
