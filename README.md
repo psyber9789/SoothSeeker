@@ -5,7 +5,7 @@ The inspiration came after joining in on the 'YouWillKnowEventually' (SK9752310)
 
 Find out more: https://www.youtube.com/@youwillknoweventually
 
-## Quick Setup
+## Quick setup
 ```
 cd ~
 git clone https://github.com/psyber9789/SoothSeeker.git
@@ -15,7 +15,7 @@ source ./bin/activate
 pip install -r ./requirements.txt
 ```
 
-## Run SoothSeeker
+### Run SoothSeeker
 ```
 python main.py
 ```
