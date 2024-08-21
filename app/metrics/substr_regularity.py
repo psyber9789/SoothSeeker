@@ -2,15 +2,16 @@
 Metric to test for the regularity of substrings of a string, and give an estimation as to the amount of structure above the individual character level
 """
 
+import math
 from collections import Counter
+from statistics import mean
+
 from app.metric import Metric
 from app.util.string import get_all_substrs
-from statistics import mean
-import math
 
 class SubstrRegularity(Metric):
-  minSize: int = 3
-  maxSize: int = 9
+  min_size: int = 3
+  max_size: int = 9
 
   def measure(self) -> float:
     return math.sqrt(mean(self.get_substr_counts()))
@@ -19,10 +20,10 @@ class SubstrRegularity(Metric):
     return self.measure() / self.max_regularity()
   
   def get_max(self) -> int:
-    return min(self.maxSize, len(self.data)) + 1
+    return min(self.max_size, len(self.data)) + 1
   
   def get_min(self) -> int:
-    return max(self.minSize, 1)
+    return max(self.min_size, 1)
   
   def get_substr_counts(self) -> list[int]:
     all_substrs = get_all_substrs(self.data, self.get_min(), self.get_max())
