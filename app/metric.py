@@ -6,3 +6,6 @@ class Metric:
 
   def measure(self) -> float:
     raise NotImplementedError('Method not implemented')
+  
+  def normalised(self) -> float:
+    return self.measure()

@@ -9,7 +9,8 @@ class Entropy(Metric):
     bases_sum = sum(bases_values)
     distribution = [x / bases_sum for x in bases_values]
 
-    entropy = float(scipy.stats.entropy(distribution, base=2))
-
-    # Scale metric to between 0 and 1
-    return max(min(entropy / 8, 1), 0)
+    return float(scipy.stats.entropy(distribution, base=2))
+  
+  def normalised(self) -> float:
+    return max(min(self.measure() / 8, 1), 0)
+    
