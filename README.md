@@ -1,9 +1,7 @@
 # SoothSeeker
 Automated encoding/cipher/encryption solver for ARGs, or more generally just quickly figuring out the encoding of data automatically. Mostly to have fun, partly to be useful, and at the same time a good opportunity to hone my Python proficiency.
 
-The inspiration came after joining in on the 'YouWillKnowEventually' (SK9752310) alternate reality game, which is based on cryptic music compliation videos posted to YouTube. Along with a growing community of players in the Discord server and Telegram channel, I've been trying my hand at figuring out the combinations of encodings, ciphers and encryptions the authors employ to obfuscate the fragments of the story as they are unveiled in new video uploads and documents released specifically on Disord and Telegram. It's been a lot of fun and I'll be continuing to join in as the project progresses.
-
-Find out more: https://www.youtube.com/@youwillknoweventually
+The inspiration came after joining in on the [YouWillKnowEventually](https://www.youtube.com/@youwillknoweventually) (SK9752310) alternate reality game, which is based on cryptic music compliation videos posted to YouTube. Along with a growing community of players in the Discord server and Telegram channel, I've been trying my hand at figuring out the combinations of encodings, ciphers and encryptions the authors employ to obfuscate the fragments of the story as they are unveiled in new video uploads and documents released specifically on Disord and Telegram. It's been a lot of fun and I'll be continuing to join in as the project progresses.
 
 ## Quick setup
 ```
