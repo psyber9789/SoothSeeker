@@ -1,7 +1,11 @@
 import rich.pretty
 import copy
+from typing import cast
 
-def dprint(*args):
+def unique[T](values: list[T]) -> list[T]:
+  return list(set(values))
+
+def dprint(*args) -> None:
   """
   Print data. Resolves nested map objects to prevent '<map object at 0x100b2db70>'.
   Useful for inspecting intermediary values.
@@ -9,7 +13,7 @@ def dprint(*args):
   for arg in [*args, '']:
     print(arg if isinstance(arg, str) else list_deep(arg))
 
-def dpprint(*args):
+def dpprint(*args) -> None:
   """
   Pretty dprint.
   """
@@ -31,7 +35,7 @@ def dpprint_thru[T](label: str, value: T, *args) -> T:
   dpprint(label, value, *args)
   return value
 
-def list_deep(target):
+def list_deep[T: object](target: T) -> T:
   """
   Resolve nested map objects to lists.
   """
@@ -53,11 +57,17 @@ def list_deep(target):
   # Clone as resolving the map object affects other references
   target = copy.deepcopy(target)
 
-  return do(target)
+  return cast(T, do(target))
 
-def flatten[T: list](deep: list[T], depth: int = 1) -> T:
+def flatten(value, depth: int = 1) -> list:
+  """
+  Flatten nested array structures.
+
+  Keyword arguments:
+  value -- the iterable
+  """
   while depth > 0:
-    deep = [n for n1 in deep for n in n1]
+    value = [n for n1 in value for n in n1]
     depth -= 1
 
-  return deep
+  return value

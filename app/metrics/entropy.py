@@ -3,7 +3,7 @@ import scipy.stats
 from app.metric import Metric
 
 class Entropy(Metric):
-  def value(self, data: str):
+  def value(self, data: str) -> float:
     bases = collections.Counter([char for char in data])
     bases_values = bases.values()
     bases_sum = sum(bases_values)

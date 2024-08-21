@@ -5,8 +5,8 @@ class AutoDecrypt(Transformation):
   dictionary: list[str] = []
 
   def handle(self, input: str) -> str:
-    pass
+    return input
 
-  def build_permutations() -> list[list[str]]:
-    pass
+  def build_permutations(self) -> list[list[str]]:
+    return [['']]
 

@@ -1,3 +1,3 @@
 class Metric:
-  def value(data: str) -> float:
+  def value(self, data: str) -> float:
     raise NotImplementedError('Method not implemented')

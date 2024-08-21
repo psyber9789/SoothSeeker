@@ -2,5 +2,5 @@ from app.metric import Metric
 
 # Base algorithm on the findings here https://aclanthology.org/D16-1228.pdf
 class Grammar(Metric):
-  def value(value: str) -> float:
-    pass
+  def value(self, value: str) -> float:
+    return 1.0
